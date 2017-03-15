@@ -7,8 +7,17 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>LegumeProjet Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  
-  <dependencies>
+  	
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- java 1.8 build path configuration eclipse -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+   <maven.compiler.target>1.8</maven.compiler.target>
+   <spring.version>4.3.7.RELEASE</spring.version>
+	<hibernate.version>5.2.5.Final</hibernate.version>
+</properties>
+
+<dependencies>
   
     <dependency>
       <groupId>junit</groupId>
@@ -37,18 +46,45 @@
 	  <version>2.1.0-b03</version>
 	</dependency>
 	
+	<!-- Hiberante -->
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+	
+	<!-- Spring -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+ 
+	<!-- Database -->
+	<dependency>
+		<groupId>org.hsqldb</groupId>
+		<artifactId>hsqldb</artifactId>
+		<version>2.3.4</version>
+	</dependency>
+	
+	<!-- Logging -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
 	
   </dependencies>
   <build>
     <finalName>LegumeProjet</finalName>
   </build>
   <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!-->
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- java 1.8 build path configuration eclipse -->
-    <maven.compiler.source>1.8</maven.compiler.source>
-   <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+
   
     
    

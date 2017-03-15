@@ -6,10 +6,23 @@
       >
     <body>
 	    <ui:composition>
-	
-			<h1>content</h1>
-				
+		<div id="contentLeft" class="innerContent">
+			<ui:insert name="contentLeft">
+		 	  <ui:include src="/template/common/commonContentLeft.xhtml" />
+		   	</ui:insert>
+	   	</div>
+	   	<div id="contentCenter" class="innerContent">
+		   	<ui:insert name="contentCenter" >
+		 	  <ui:include src="/template/common/commonContentCenter.xhtml" />
+		   	</ui:insert>
+	   	</div>
+	   	<div id="contentRight" class="innerContent">
+		   	<ui:insert name="contentRight" >
+		 	  <ui:include src="/template/common/commonContentRight.xhtml" />
+		   	</ui:insert>
+	   	</div>
 	    </ui:composition>
+	    
     </body>
 </html>
 
